@@ -55,7 +55,7 @@ def process_folder(input_folder, output_folder, target_length=3, sample_rate=160
 
         print(f"Checking file: {file_name}")
         
-        if os.path.isfile(file_path) and file_name.lower().endswith(".mp3"):
+        if os.path.isfile(file_path) and file_name.lower().endswith(".wav"):
             print(f"Processing file: {file_name}")
             preprocess_audio(file_path, output_folder, target_length, sample_rate)
         else:
@@ -63,7 +63,21 @@ def process_folder(input_folder, output_folder, target_length=3, sample_rate=160
 
 
 # Example usage
-input_folder = "input_audio"
-output_folder = "output_audio"
-print(f"Processing all audio files in {input_folder}...")
-process_folder(input_folder, output_folder)
+input_folder1 = "goose_recordings"
+output_folder1 = "goose_recordings_refined"
+
+input_folder2 = "other_recordings"
+output_folder2 = "other_recordings_refined"
+
+input_folder3 = "external_recordings"
+output_folder3 = "external_recordings_refined"
+'''
+print(f"Processing all audio files in {input_folder1}...")
+process_folder(input_folder1, output_folder1)
+print(f"Processing all audio files in {input_folder2}...")
+process_folder(input_folder2, output_folder2)
+
+'''
+
+print(f"Processing all audio files in {input_folder3}...")
+process_folder(input_folder3, output_folder3)
